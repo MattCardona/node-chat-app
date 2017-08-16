@@ -4,8 +4,17 @@
   <title></title>
 </head>
 <body>
-  <p>Welcome to the node chat app</p>
+  <p>Welcome to the node Chat Cha app</p>
+
+  <ol id="messages"></ol>
+
+  <form id="messageForm">
+    <input type="text" name="message" placeholder="Message">
+    <button>Send</button>
+  </form>
+
   <script src="/socket.io/socket.io.js"></script>
+  <script src="/js/libs/jquery-3.2.1.min.js"></script>
   <script src="/js/index.js"></script>
 </body>
 </html>
