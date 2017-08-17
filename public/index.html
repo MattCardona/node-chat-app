@@ -1,18 +1,31 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title></title>
+<meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="/css/styles.css">
+  <title>Chat Cha App</title>
 </head>
-<body>
-  <p>Welcome to the node Chat Cha app</p>
+<body class="chat">
 
-  <ol id="messages"></ol>
+  <div class="chat__sidebar">
+    <h3>People</h3>
+    <div id="users"></div>
+  </div>
 
-  <form id="messageForm">
-    <input type="text" name="message" placeholder="Message">
-    <button>Send</button>
-  </form>
-  <button id="sendLocation">Send Location</button>
+  <div class="chat__main">
+    <ol id="messages" class="chat__messages"></ol>
+
+    <div class="chat__footer">
+      <form id="messageForm">
+        <input type="text" name="message" placeholder="Message" autofocus autocomplete="off">
+        <button>Send</button>
+      </form>
+      <button id="sendLocation">Send location</button>
+    </div>
+
+  </div>
+
+
 
   <script src="/socket.io/socket.io.js"></script>
   <script src="/js/libs/jquery-3.2.1.min.js"></script>
