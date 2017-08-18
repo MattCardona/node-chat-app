@@ -12,7 +12,8 @@ function scrollToBottom() {
   var lastMessageHeight = newMessage.prev().innerHeight();
 
   if (clientHeight + scrollTop + newMessageHeight + lastMessageHeight >= scrollHeight){
-    messages.scrollTop(scrollHeight);
+    messages.animate({scrollTop:scrollHeight}, 1000);
+    return false;
   }
 }
 
